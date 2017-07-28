@@ -1,17 +1,17 @@
 def caesar_cipher(plaintext, shift)
-	letters_downcase = ('a'..'z').to_a
-	letters_upcase = ('A'..'Z').to_a
-	ret = String.new
-	plaintext.chars.each do |x|
-		if letters_downcase.include?(x)
-			ret.concat(letters_downcase[letters_downcase.find_index(x.downcase) + shift - letters_downcase.size].downcase)
-		elsif letters_upcase.include?(x)
-			ret.concat(letters_upcase[letters_upcase.find_index(x.upcase) + shift - letters_upcase.size].upcase)
-		else
-			ret.concat(x)
-		end			
-	end
-	return ret
+   letters_downcase = ('a'..'z').to_a
+   letters_upcase = ('A'..'Z').to_a
+   ret = String.new
+   plaintext.chars.each do |x|
+      if letters_downcase.include?(x)
+         ret.concat(letters_downcase[letters_downcase.find_index(x.downcase) + shift - letters_downcase.size].downcase)
+      elsif letters_upcase.include?(x)
+         ret.concat(letters_upcase[letters_upcase.find_index(x.upcase) + shift - letters_upcase.size].upcase)
+      else
+         ret.concat(x)
+      end			
+   end
+   return ret
 end
 
 
